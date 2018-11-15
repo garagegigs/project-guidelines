@@ -10,6 +10,10 @@
 > While developing a new project is like rolling on a green field for you, maintaining it is a potential dark twisted nightmare for someone else.
 Here's a list of guidelines we've found, written and gathered that (we think) works really well with most JavaScript projects here at [elsewhen](http://elsewhen.co).
 If you want to share a best practice, or think one of these guidelines should be removed, [feel free to share it with us](http://makeapullrequest.com).
+
+🔥 [Checkout](https://github.com/elsewhencode/react-redux-saucepan) our [minimal react redux starter](https://github.com/elsewhencode/react-redux-saucepan) in Flow with hot reloading and server-side rendering.
+<hr>
+
 - [Git](#git)
     - [Some Git rules](#some-git-rules)
     - [Git workflow](#git-workflow)
@@ -94,11 +98,18 @@ Because of most of the reasons above, we use [Feature-branch-workflow](https://w
     ```
 * Make Changes.
     ```sh
-    git add
-    git commit -a
+    git add <file1> <file2> ...
+    git commit
     ```
     _Why:_
-    > `git commit -a` will start an editor which lets you separate the subject from the body. Read more about it in *section 1.3*.
+    > `git add <file1> <file2> ... ` - you should add only files that make up a small and coherent change.
+    
+    > `git commit` will start an editor which lets you separate the subject from the body. 
+    
+    > Read more about it in *section 1.3*.
+    
+    _Tip:_
+    > You could use `git add -p` instead, which will give you chance to review all of the introduced changes one by one, and decide whether to include them in the commit or not.
 
 * Sync with remote to get changes you’ve missed.
     ```sh
